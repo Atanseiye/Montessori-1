@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <!-- Include Bootstrap CSS from the CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+<style>
+    .shift {
+        padding: 1em 1em 1em 1em;
+    }
+
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .nav-pad {
+        padding: 1em 0em;
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+
+    .header1 {
+        height: 450px;
+        width: 100%;
+        text-align: center;
+        padding-top: 100px;
+        color: white;
+        overflow: hidden;
+        background: #C04848;
+        /* fallback for old browsers */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header1_image {
+        /* position: relative; */
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("deb.jpg");
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("deb.jpg");
+        background-size: cover;
+        /* Cover the entire container */
+        background-position: center 20%;
+        /* Center the image horizontally and vertically */
+    }
+
+    .header2_image {
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("frc.jpg");
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("frc.jpg");
+        background-size: cover;
+        /* Cover the entire container */
+        background-position: center 20%;
+        /* Center the image horizontally and vertically */
+    }
+
+    .header3_image {
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("h.png");
+        background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)), url("h.png");
+        background-size: cover;
+        /* Cover the entire container */
+        background-position: center 20%;
+        /* Center the image horizontally and vertically */
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+
+    h4 {
+        padding: 2em;
+        text-align: center;
+    }
+
+    .welcome_card_image {
+        height: 250px;
+    }
+
+    /* Your existing carousel styles here */
+    /* ... */
+</style>
+
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Of Navigation bar -->
+
+
+    <!-- Carousel with overlay -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-size" data-ride="carousel">
+
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section class='header1 header1_image'>
+                    <h3>Hero title</h3>
+                    <p>We had such a great time in LA!</p>
+                    <button>Sign-up</button>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class='header1 header2_image'>
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                    <button>Sign-up</button>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class='header1 header2_image'>
+                    <h3>New York</h3>
+                    <p>We love the Big Apple!</p>
+                    <button>Sign-up</button>
+                </section>
+            </div>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+    <!-- Welcome to the School  -->
+    <div class="shift">
+
+        <h4 class="welcome-note">
+            Welcome to this college
+        </h4>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top welcome_card_image" src="deb.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top welcome_card_image" src="frc.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Our Community</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top welcome_card_image" src="deb.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Our Archievement</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Introduction -->
+
+
+    <!-- Gallery -->
+    <div id="carouselMultiItemExample" class="carousel slide text-center" data-ride="carousel">
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev position-relative" type="button"
+                data-target="#carouselMultiItemExample" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next position-relative" type="button"
+                data-target="#carouselMultiItemExample" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+        <!-- Inner -->
+        <div class="carousel-inner">
+            <!-- Single item 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <!-- First Column -->
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
+                                    class="card-img-top" alt="Waterfall">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Column (visible only on larger screens) -->
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+                                    class="card-img-top" alt="Sunset Over the Sea">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Column (visible only on larger screens) -->
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class = "card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp"
+                                    class="card-img-top" alt="Sunset over the Sea">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single item 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <!-- First Column -->
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+                                    class="card-img-top" alt="Fissure in Sandstone">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Column (visible only on larger screens) -->
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+                                    class="card-img-top" alt="Storm Clouds">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Column (visible only on larger screens) -->
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+                                    class="card-img-top" alt="Hot Air Balloons">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single item 3 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <!-- First Column -->
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+                                    class="card-img-top" alt="Peaks Against the Starry Sky">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Column (visible only on larger screens) -->
+                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+                                    class="card-img-top" alt="Bridge Over Water">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Column (visible only on larger screens) -->
+                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                            <div class="card">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+                                    class="card-img-top" alt="Purbeck Heritage Coast">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+
+    </div>
+    <!-- End Of Gallery -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        // JavaScript to make the navigation bar sticky on scroll
+        window.addEventListener("scroll", function () {
+            var navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 0) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
